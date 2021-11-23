@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piboidin <piboidin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 15:06:39 by piboidin          #+#    #+#             */
-/*   Updated: 2021/10/08 15:06:41 by piboidin         ###   ########.fr       */
+/*   Created: 2021/10/08 15:01:33 by piboidin          #+#    #+#             */
+/*   Updated: 2021/10/08 15:38:44 by piboidin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_next_str(char *next_str)
 {
@@ -93,14 +93,14 @@ char	*ft_reader(int fd, char *next_str)
 char	*get_next_line(int fd)
 {
 	char		*str;
-	static char	*next_str;
+	static char	*next_str[4096];
 
 	if (fd < 0 || BUFFER_SIZE < 0)
 		return (0);
-	next_str = ft_reader(fd, next_str);
-	if (!next_str)
+	next_str[fd] = ft_reader(fd, next_str[fd]);
+	if (!next_str[fd])
 		return (NULL);
-	str = ft_gstr(next_str);
-	next_str = ft_next_str(next_str);
+	str = ft_gstr(next_str[fd]);
+	next_str[fd] = ft_next_str(next_str[fd]);
 	return (str);
 }

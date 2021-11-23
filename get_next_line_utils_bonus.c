@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piboidin <piboidin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 11:05:14 by piboidin          #+#    #+#             */
-/*   Updated: 2021/10/08 12:24:40 by piboidin         ###   ########.fr       */
+/*   Updated: 2021/10/08 15:32:35 by piboidin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strchr(char *s, int c)
 {
@@ -53,7 +53,7 @@ char	*ft_strjoin(char *next_str, char *buffer)
 	}
 	if (!next_str || !buffer)
 		return (NULL);
-	str = malloc(sizeof(char) * (ft_len(next_str) + ft_len(buffer) + 1));
+	str = malloc(sizeof(char) * ((ft_len(next_str) + ft_len(buffer)) + 1));
 	if (str == NULL)
 		return (NULL);
 	i = -1;
