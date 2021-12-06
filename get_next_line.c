@@ -6,7 +6,7 @@
 /*   By: piboidin <piboidin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 15:06:39 by piboidin          #+#    #+#             */
-/*   Updated: 2021/10/08 15:06:41 by piboidin         ###   ########.fr       */
+/*   Updated: 2021/12/06 14:26:36 by piboidin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_next_str(char *next_str)
 		free(next_str);
 		return (NULL);
 	}
-	str = (char *)malloc(sizeof(char) * (ft_len(next_str) - i + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(next_str) - i + 1));
 	if (!str)
 		return (NULL);
 	i++;

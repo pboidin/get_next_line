@@ -6,7 +6,7 @@
 /*   By: piboidin <piboidin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 11:05:14 by piboidin          #+#    #+#             */
-/*   Updated: 2021/10/08 12:24:40 by piboidin         ###   ########.fr       */
+/*   Updated: 2021/12/06 14:28:04 by piboidin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(char *s, int c)
 	if (!s)
 		return (0);
 	if (c == '\0')
-		return ((char *)&s[ft_len(s)]);
+		return ((char *)&s[ft_strlen(s)]);
 	while (s[i] != '\0')
 	{
 		if (s[i] == (char) c)
@@ -30,7 +30,7 @@ char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-int	ft_len(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -53,7 +53,7 @@ char	*ft_strjoin(char *next_str, char *buffer)
 	}
 	if (!next_str || !buffer)
 		return (NULL);
-	str = malloc(sizeof(char) * (ft_len(next_str) + ft_len(buffer) + 1));
+	str = malloc(sizeof(char) * (ft_strlen(next_str) + ft_strlen(buffer) + 1));
 	if (str == NULL)
 		return (NULL);
 	i = -1;
@@ -63,7 +63,7 @@ char	*ft_strjoin(char *next_str, char *buffer)
 			str[i] = next_str[i];
 	while (buffer[j] != '\0')
 		str[i++] = buffer[j++];
-	str[ft_len(next_str) + ft_len(buffer)] = '\0';
+	str[ft_strlen(next_str) + ft_strlen(buffer)] = '\0';
 	free(next_str);
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: piboidin <piboidin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 15:06:54 by piboidin          #+#    #+#             */
-/*   Updated: 2021/11/23 09:05:42 by piboidin         ###   ########.fr       */
+/*   Updated: 2021/12/06 14:26:26 by piboidin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 char	*get_next_line(int fd);
 char	*ft_strchr(char *s, int c);
 char	*ft_strjoin(char *next_str, char *buffer);
-int		ft_len(char *str);
+int		ft_strlen(char *str);
 void	ft_putchar(char c);
 
 #endif
