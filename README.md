@@ -1,10 +1,11 @@
 # get_next_line
 Whether it's a file, stdin, or even later a network connection, you will always need a way to read the content line by line. It's time to start working on this feature, which will be essential for your future projects.
 
-#Goals
+# Goals
 This project will not only allow you to add a very useful function to your collection, but also to learn about a surprising new element of C programming: static variables.
 
-#Description
+# Description
+
 Write a function that returns a line read from a file descriptor
 - Successive calls to your get_next_line() function should allow you to read the entire text file referenced by the file descriptor, one line at a time.
 - Your function should return the line that has just been read. If there is nothing left to read, or if there is an error, it must return NULL.
@@ -20,7 +21,7 @@ Write a function that returns a line read from a file descriptor
 - We consider that get_next_line() has an undetermined behavior if, between two calls, the file pointed to by the file descriptor has been modified, while the the first file has not been read in full.
 - We also consider that get_next_line() has an undetermined behavior in case of when reading a binary file. However, if you wish, you can make this behavior consistent.
 
-#Bonus part
+  # Bonus part
 Because of its simplicity, the get_next_line project leaves little room for bonuses, but we are sure you have a lot of imagination. If you have succeeded in the mandatory part, then feel free to do the bonuses to go further.
 Here are the bonuses to do:
 - Do get_next_line() with a single static variable.
